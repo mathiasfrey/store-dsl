@@ -20,6 +20,7 @@ code {
   --lightBlueText: rgba(27, 101, 209, 255);
   --lightGrayBg: rgba(245, 247, 250, 255);
   --darkBg: rgb(34, 34, 34);
+  --container: 90%;
 }
 
 .App {
@@ -27,10 +28,4 @@ code {
   max-width: 375px;
   margin: 0 auto;
   background-color: var(--lightGrayBg);
-}
-
-.container {
-  width: 90%;
-  margin: 0 auto;
-  border: 1px solid red;
 }

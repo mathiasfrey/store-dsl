@@ -8,10 +8,17 @@
   width: 100%;
 }
 
+.Container {
+  width: var(--container);
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  margin: 0 auto;
+  padding-bottom: 2.5em;
+}
+
 .Stripe h1 {
-  padding: 1em;
-  padding-top: 0;
-  padding-left: 0.75em;
   color: #fff;
 }
 
@@ -20,15 +27,14 @@
   background: none;
   color: #fff;
   font-size: 2rem;
-  padding: 0.5em;
   cursor: pointer;
-  min-height: 2.5em;
+  min-height: 2em;
 }
 
 .BtnPlaceholder {
   width: 10px;
-  height: 2.5em;
-  min-height: 2.5em;
+  height: 2em;
+  min-height: 2em;
   font-size: 2rem;
 }
 

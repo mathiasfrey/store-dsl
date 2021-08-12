@@ -16,14 +16,16 @@ export default function Stripe() {
     const stripeData = Object.values(storeMainData).filter((item) => item.__component === "ui-components.stripe")[0];
     return (
       <div className={Classes.Stripe} style={{ backgroundColor: stripeData.backgroundColor.color }}>
-        {stripeData.showBackBtn ? (
-          <button type="button">
-            <IoIosArrowBack />
-          </button>
-        ) : (
-          <div className={Classes.BtnPlaceholder}></div>
-        )}
-        <h1>{stripeData.title}</h1>
+        <div className={Classes.Container}>
+          {!stripeData.showBackBtn ? (
+            <button type="button">
+              <IoIosArrowBack />
+            </button>
+          ) : (
+            <div className={Classes.BtnPlaceholder}></div>
+          )}
+          <h1>{stripeData.title}</h1>
+        </div>
       </div>
     );
   }
