@@ -5,9 +5,8 @@
   align-items: center;
   flex-direction: column;
   width: 90%;
-  border: 1px solid var(--lightBg);
   border-radius: 10px;
-  box-shadow: 3px 3px 5px #cfcdcd;
+  box-shadow: 3px 3px 3px #cfcdcd;
 }
 
 .FeatureCardBody {
@@ -17,14 +16,11 @@
   flex-direction: column;
   width: 100%;
   text-align: center;
+  height: 175px;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-}
-
-.FeatureCardBody img {
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
-  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .FeatureCardFooter {
@@ -39,10 +35,12 @@
 }
 
 .FeatureCardFooter h4 {
-  padding: 0.75em 0;
+  padding: 0.5em 0;
+  color: rgba(34, 66, 110, 255);
 }
 
 .FeatureCardFooter p {
-  padding: 0.75em 0;
-  font-size: 0.8rem;
+  padding: 0.5em 0;
+  font-size: 0.9rem;
+  color: rgba(104, 130, 161, 255);
 }

@@ -62,9 +62,7 @@ export default function StoreMain() {
     console.log(itemsToDisplay);
     return (
       <StoreMainDataProvider value={storeMainData}>
-        <div className="container">
-          <div className={Classes.StoreMain}>{itemsToDisplay}</div>
-        </div>
+        <div className={Classes.StoreMain}>{itemsToDisplay}</div>
       </StoreMainDataProvider>
     );
   }

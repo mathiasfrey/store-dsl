@@ -22,8 +22,8 @@ export default function FeatureCard({ id }) {
     const { productImage, title, subtitle } = FeatureCard.product;
     return (
       <div className={Classes.FeatureCard} style={{ backgroundColor: backgroundColor, marginTop: `${isFirstOverviewItem ? "-1.5em" : "1em"}` }}>
-        <div className={Classes.FeatureCardBody} style={{ backgroundColor: backgroundColor }}>
-          <img src={`${BASE_URL}${productImage.url}`} alt={productImage.alternativeText} />
+        <div className={Classes.FeatureCardBody} style={{ backgroundImage: `url(${BASE_URL}${productImage.url})` }}>
+          {/* <img src={``} alt={productImage.alternativeText} /> */}
           {/* <img src={placeholderImgUrl} alt={productImage.alternativeText} /> */}
         </div>
         <div className={Classes.FeatureCardFooter}>
