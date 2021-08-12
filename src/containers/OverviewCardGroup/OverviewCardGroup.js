@@ -1,7 +1,10 @@
 import React from "react";
 import { StoreMainDataConsumer } from "../../contexts/storeMainData";
-import CardGroupDataMock from "../../data/groupings.json";
-import { fetchCardGroupData } from "../../utils/api";
+import CardGroupItemsDataMock from "../../data/groupings.json";
+import { fetchCardGroupItemsData } from "../../utils/api";
+import { Link } from "react-router-dom";
+
+import { IoIosArrowForward } from "react-icons/io";
 
 import ProductCard from "../../components/ProductCard/ProductCard";
 import PluginCard from "../../components/PluginCard/PluginCard";
@@ -10,18 +13,18 @@ import Classes from "./OverviewCardGroup.module.css";
 
 export default function OverviewCardGroup({ id, groupingId }) {
   let storeMainData = React.useContext(StoreMainDataConsumer);
-  const [cardGroupData, setCardGroupData] = React.useState();
+  const [cardGroupItemsData, setCardGroupItemsData] = React.useState();
 
   React.useEffect(() => {
-    fetchCardGroupData(groupingId)
-      .then((data) => setCardGroupData(data))
+    fetchCardGroupItemsData(groupingId)
+      .then((data) => setCardGroupItemsData(data))
       .catch(({ message }) => {
         console.log(message);
-        setCardGroupData(Object.values(CardGroupDataMock).filter((item) => item.id === groupingId));
+        setCardGroupItemsData(Object.values(CardGroupItemsDataMock).filter((item) => item.id === groupingId));
       });
   }, []);
 
-  if (cardGroupData === undefined) {
+  if (cardGroupItemsData === undefined) {
     return (
       <div className={Classes.OverviewCardGroup}>
         <p>Loading...</p>
@@ -29,9 +32,10 @@ export default function OverviewCardGroup({ id, groupingId }) {
     );
   } else {
     const CardGroup = Object.values(storeMainData).filter((item) => item.id === id)[0];
+    console.log("===============Card group==========================");
     console.log(CardGroup);
-    console.log("Card group data");
-    console.log(cardGroupData);
+    console.log("===============Card group items data===============");
+    console.log(cardGroupItemsData);
     const groupCardBackgroundColor = CardGroup.backgroundColor.color;
     const groupCardType = CardGroup.cardType.cardTypes;
     const groupingId = CardGroup.grouping.id;
@@ -39,14 +43,24 @@ export default function OverviewCardGroup({ id, groupingId }) {
     const groupActionTitle = CardGroup.title.actionTitle;
     const groupActionTarget = CardGroup.title.actionTarget;
     return (
-      <div className={Classes.OverviewCardGroup}>
-        <h4 className={Classes.GroupTitle}>{groupTitle}</h4>
-        {/* <div className={Classes.Cards}>
-          {CardGroupData.products.map((item) => (
+      <div className={Classes.Container}>
+        <div className={Classes.OverviewCardGroup}>
+          <div className={Classes.OverviewCardGroupHeader}>
+            <h4 className={Classes.GroupTitle}>{groupTitle}</h4>
+            {groupActionTarget ? (
+              <Link to={groupActionTarget}>
+                {groupActionTitle}
+                <IoIosArrowForward className={Classes.ArrowIcon} />
+              </Link>
+            ) : null}
+          </div>
+          {/* <div className={Classes.Cards}>
+          {CardGroupItemsData.products.map((item) => (
             <ProductCard id={item.id} key={item.id} cardsBgColor={cardsBgColor} title={item.title} icon={item.icon} />
           ))}
         </div> */}
-        <p>collection</p>
+          <p>collection</p>
+        </div>
       </div>
     );
   }
