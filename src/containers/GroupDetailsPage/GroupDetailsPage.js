@@ -1,16 +1,17 @@
 import React from "react";
 import PluginsPageMockedData from "../../data/plugins-page.json";
+import { useLocation } from "react-router-dom";
 import { fetchGroupDetailsPageData } from "../../utils/api";
 
 import GetPageComponent from "../../utils/getPageComponent";
 
 import Classes from "./GroupDetailsPage.module.css";
 
-export default function GroupDetailsPage({ targetPage }) {
+export default function GroupDetailsPage() {
+  const location = useLocation();
   const [groupDetailsPageData, setGroupDetailsPageData] = React.useState("");
-
   React.useEffect(() => {
-    fetchGroupDetailsPageData("/plugins-page")
+    fetchGroupDetailsPageData(location.pathname)
       .then((data) => setGroupDetailsPageData(data.body))
       .catch(({ message }) => {
         console.log(message);
