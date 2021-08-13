@@ -36,7 +36,6 @@ export default function GroupDetailsPage({ targetPage }) {
 
     return (
       <div className={Classes.GroupDetailsPage}>
-        {itemsToDisplay}
         <p>This will be a page with plugins</p>
       </div>
     );
