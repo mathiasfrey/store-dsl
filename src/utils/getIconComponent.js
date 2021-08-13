@@ -9,6 +9,12 @@ import { MdWallpaper } from "react-icons/md";
 import { FaMoneyBillWaveAlt } from "react-icons/fa";
 import { FaCcVisa } from "react-icons/fa";
 import { FaRegFileArchive } from "react-icons/fa";
+import { GiBrokenBone } from "react-icons/gi";
+import { IoUmbrella } from "react-icons/io";
+import { ImHome3 } from "react-icons/im";
+import { FaTachometerAlt } from "react-icons/fa";
+import { GiMoneyStack } from "react-icons/gi";
+import { GiPayMoney } from "react-icons/gi";
 import { CgUnavailable } from "react-icons/cg";
 
 let icons = {
@@ -23,6 +29,12 @@ let icons = {
   FaMoneyBillWaveAlt,
   FaCcVisa,
   FaRegFileArchive,
+  GiBrokenBone,
+  IoUmbrella,
+  ImHome3,
+  FaTachometerAlt,
+  GiMoneyStack,
+  GiPayMoney,
   CgUnavailable,
 };
 
