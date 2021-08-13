@@ -31,10 +31,10 @@ export default function OverviewCardGroup({ id, groupingId }) {
     );
   } else {
     const CardGroup = Object.values(storeMainData).filter((item) => item.id === id)[0];
-    // console.log("===============Card group==========================");
-    // console.log(CardGroup);
-    // console.log("===============Card group items data===============");
-    // console.log(cardGroupItemsData);
+    console.log("===============Card group==========================");
+    console.log(CardGroup);
+    console.log("===============Card group items data===============");
+    console.log(cardGroupItemsData);
     const groupCardBackgroundColor = CardGroup.backgroundColor.color;
     const groupCardType = CardGroup.cardType.cardTypes;
     const groupingId = CardGroup.grouping.id;
