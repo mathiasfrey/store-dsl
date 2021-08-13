@@ -13,6 +13,7 @@ export default function StoreMain() {
       .then((data) => setStoreMainData(data.body))
       .catch(({ message }) => {
         console.log(message);
+        alert("API down. Mocked data used instead!");
         setStoreMainData(StoreMainDataMock.body);
       });
   }, []);

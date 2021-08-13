@@ -16,6 +16,7 @@ export default function GroupDetailsPage() {
       .then((data) => setGroupDetailsPageData(data.body))
       .catch(({ message }) => {
         console.log(message);
+        alert("API down. Mocked data used instead!");
         setGroupDetailsPageData(PluginsPageMockedData.body);
       });
   }, []);

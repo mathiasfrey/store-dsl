@@ -27,6 +27,7 @@ export default function OverviewCardGroup({ item }) {
       .then((data) => setCardGroupItemsData(data.filter((item) => item.id === groupingId)[0]))
       .catch(({ message }) => {
         console.log(message);
+
         setCardGroupItemsData(CardGroupItemsDataMock.filter((item) => item.id === groupingId)[0]);
       });
   }, []);
