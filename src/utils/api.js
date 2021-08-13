@@ -11,8 +11,8 @@ export async function fetchStoreMainData() {
 }
 
 //Fetch card collection details
-export async function fetchCardGroupItemsData(cardGroupId) {
-  const response = await fetch(`${BASE_URL}/groupings/${cardGroupId}`);
+export async function fetchCardGroupItemsData() {
+  const response = await fetch(`${BASE_URL}/groupings}`);
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }

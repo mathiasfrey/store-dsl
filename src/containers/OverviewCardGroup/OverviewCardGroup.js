@@ -16,16 +16,13 @@ export default function OverviewCardGroup({ id, groupingId }) {
   // console.log("storeMainData", storeMainData);
   // console.log("cardGroupItemsData", cardGroupItemsData);
   React.useEffect(() => {
-    fetchCardGroupItemsData(groupingId)
-      .then((data) => setCardGroupItemsData(data))
+    fetchCardGroupItemsData()
+      .then((data) => setCardGroupItemsData(data.filter((item) => item.id === groupingId)[0]))
       .catch(({ message }) => {
         console.log(message);
-        setCardGroupItemsData(Object.values(CardGroupItemsDataMock).filter((item) => item.id === groupingId));
+        setCardGroupItemsData(CardGroupItemsDataMock.filter((item) => item.id === groupingId)[0]);
       });
   }, []);
-
-  console.log("cardGroupItemsData mock");
-  console.log(cardGroupItemsData);
 
   if (cardGroupItemsData === undefined || storeMainData === undefined) {
     return (
