@@ -7,7 +7,6 @@ export async function fetchStoreMainData() {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
   const mainData = await response.json();
-  console.log(mainData);
   return mainData;
 }
 

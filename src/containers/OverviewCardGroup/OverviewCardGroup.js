@@ -31,16 +31,16 @@ export default function OverviewCardGroup({ id, groupingId }) {
     );
   } else {
     const CardGroup = Object.values(storeMainData).filter((item) => item.id === id)[0];
-    console.log("===============Card group==========================");
+    console.log("================Card group=========================================================");
     console.log(CardGroup);
-    console.log("===============Card group items data===============");
+    console.log("===============>Card group items data");
     console.log(cardGroupItemsData);
     const groupCardBackgroundColor = CardGroup.backgroundColor.color;
     const groupCardType = CardGroup.cardType.cardTypes;
     const groupingId = CardGroup.grouping.id;
-    const groupTitle = CardGroup.title.label;
-    const groupActionTitle = CardGroup.title.actionTitle;
-    const groupActionTarget = CardGroup.title.actionTarget;
+    const groupTitle = CardGroup.title;
+    const groupActionTitle = CardGroup.action ? CardGroup.action.actionTitle : null;
+    const groupActionTarget = CardGroup.action ? CardGroup.action.actionTarget : null;
 
     const groupCardsToDisplay = Object.values(cardGroupItemsData.products).map((item) =>
       GetCardComponent({
@@ -48,6 +48,7 @@ export default function OverviewCardGroup({ id, groupingId }) {
         cardComponentId: item.id,
         bgColor: groupCardBackgroundColor,
         icon: item.icon,
+        iconColor: item.iconColor ? item.iconColor.color : null,
         title: item.title,
         subtitle: item.subtitle,
       })

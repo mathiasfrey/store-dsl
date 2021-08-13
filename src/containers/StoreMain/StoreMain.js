@@ -26,6 +26,7 @@ export default function StoreMain() {
       </div>
     );
   } else {
+    console.log(storeMainData);
     const itemsToDisplay = Object.values(storeMainData).map((item) =>
       GetPageComponent({
         componentType: item.__component,

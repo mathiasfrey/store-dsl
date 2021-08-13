@@ -2,7 +2,7 @@
   "id": 1,
   "published_at": "2021-08-13T09:38:55.245Z",
   "created_at": "2021-08-13T09:36:27.212Z",
-  "updated_at": "2021-08-13T09:41:30.755Z",
+  "updated_at": "2021-08-13T10:30:50.537Z",
   "body": [
     {
       "__component": "ui-components.stripe",
@@ -104,7 +104,7 @@
       },
       "cardType": {
         "id": 15,
-        "cardTypes": "productCard"
+        "cardTypes": "featureCard"
       }
     },
     {

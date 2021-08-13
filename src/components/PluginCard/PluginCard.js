@@ -4,14 +4,16 @@ import CSS_COLOR_NAMES from "../../utils/cssColorNames";
 
 import Classes from "./PluginCard.module.css";
 
-export default function PluginCard({ id, icon, title, subtitle, bgColor }) {
+export default function PluginCard({ id, icon, iconColor, title, subtitle, bgColor }) {
   let cssColors = CSS_COLOR_NAMES.map((color) => color.toLowerCase());
-  let cardBackgroundColor = cssColors.includes(bgColor.toLowerCase()) ? bgColor : "White";
-  let hardCodedBackgroundColor = "white";
+  let bgColorValidated = cssColors.includes(bgColor.toLowerCase()) ? bgColor : "White";
+  let iconColorValidated = cssColors.includes(iconColor.toLowerCase()) ? iconColor : "DodgerBlue";
+  //let hardCodedBackgroundColor = "white";
+  console.log("iconColor", iconColor);
   return (
     <div className={Classes.PluginCardWrapper}>
-      <div className={Classes.PluginCard} style={{ backgroundColor: `${hardCodedBackgroundColor}` }}>
-        <div className={Classes.Icon}>{getIconComponent({ icon: icon, color: `${cardBackgroundColor}`, fontSize: "2.5rem", alignSelf: "left" })}</div>
+      <div className={Classes.PluginCard} style={{ backgroundColor: `${bgColorValidated}` }}>
+        <div className={Classes.Icon}>{getIconComponent({ icon: icon, color: `${iconColorValidated}`, fontSize: "2.5rem", alignSelf: "left" })}</div>
         <p className={Classes.Title}>{title}</p>
         <p className={Classes.Subtitle}>{subtitle.slice(0, 30) + "."}</p>
       </div>
