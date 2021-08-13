@@ -4,7 +4,7 @@ import { BASE_URL } from "../../utils/api";
 
 import Classes from "./FeatureCard.module.css";
 
-const placeholderBgUrl = "https://images.unsplash.com/photo-1584824486509-112e4181ff6b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
+// const placeholderBgUrl = "https://images.unsplash.com/photo-1584824486509-112e4181ff6b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80";
 
 export default function FeatureCard({ id }) {
   let storeMainData = React.useContext(StoreMainDataConsumer);
