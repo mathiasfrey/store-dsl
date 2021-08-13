@@ -1,4 +1,5 @@
 import React from "react";
+import { useLocation } from "react-router-dom";
 import { fetchCardGroupItemsData } from "../../utils/api";
 import CardGroupItemsDataMock from "../../data/groupings.json";
 import { Link } from "react-router-dom";
@@ -10,6 +11,8 @@ import GetCardComponent from "../../utils/getCardComponent";
 import Classes from "./OverviewCardGroup.module.css";
 
 export default function OverviewCardGroup({ item }) {
+  const location = useLocation();
+  console.log(location.pathname);
   const cardGroupData = { ...item };
   const groupCardBackgroundColor = cardGroupData.backgroundColor.color;
   const groupCardType = cardGroupData.cardType.cardTypes;
@@ -56,7 +59,7 @@ export default function OverviewCardGroup({ item }) {
               </Link>
             ) : null}
           </div>
-          <div className={Classes.Cards}>{groupCardType === "pluginCard" ? groupCardsToDisplay.slice(0, 2) : groupCardsToDisplay}</div>
+          <div className={Classes.Cards}>{groupCardType === "pluginCard" && location.pathname == "/" ? groupCardsToDisplay.slice(0, 2) : groupCardsToDisplay}</div>
         </div>
       </div>
     );

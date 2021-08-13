@@ -5,7 +5,7 @@
   align-items: flex-start;
 }
 
-.PluginCardWrapper + .PluginCardWrapper {
+.PluginCardWrapper:nth-child(even) {
   margin-left: 1em;
 }
 
