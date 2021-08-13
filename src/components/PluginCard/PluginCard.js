@@ -4,7 +4,11 @@ import CSS_COLOR_NAMES from "../../utils/cssColorNames";
 
 import Classes from "./PluginCard.module.css";
 
-export default function PluginCard({ id, icon, iconColor, title, subtitle, bgColor }) {
+export default function PluginCard({ item, bgColor }) {
+  const pluginCardData = { ...item };
+  const { icon, title, subtitle } = pluginCardData;
+  const iconColor = pluginCardData.iconColor.color;
+
   let cssColors = CSS_COLOR_NAMES.map((color) => color.toLowerCase());
   let bgColorValidated = cssColors.includes(bgColor.toLowerCase()) ? bgColor : "White";
   let iconColorValidated = cssColors.includes(iconColor.toLowerCase()) ? iconColor : "DodgerBlue";

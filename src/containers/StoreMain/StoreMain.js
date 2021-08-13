@@ -1,10 +1,8 @@
 import React from "react";
-import { StoreMainDataProvider } from "../../contexts/storeMainData";
 import StoreMainDataMock from "../../data/store-main.json";
 import { fetchStoreMainData } from "../../utils/api";
 
 import GetPageComponent from "../../utils/getPageComponent";
-
 import Classes from "./StoreMain.module.css";
 
 export default function StoreMain() {
@@ -26,18 +24,7 @@ export default function StoreMain() {
       </div>
     );
   } else {
-    const itemsToDisplay = Object.values(storeMainData).map((item) =>
-      GetPageComponent({
-        componentType: item.__component,
-        componentId: item.id,
-        cardType: item.cardType ? item.cardType.cardTypes : null,
-        groupingId: item.grouping ? item.grouping.id : null,
-      })
-    );
-    return (
-      <StoreMainDataProvider value={storeMainData}>
-        <div className={Classes.StoreMain}>{itemsToDisplay}</div>
-      </StoreMainDataProvider>
-    );
+    const itemsToDisplay = Object.values(storeMainData).map((item) => GetPageComponent({ item, order: storeMainData.indexOf(item) }));
+    return <div className={Classes.StoreMain}>{itemsToDisplay}</div>;
   }
 }

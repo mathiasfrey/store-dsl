@@ -23,18 +23,19 @@
   color: #fff;
 }
 
-.Stripe button {
+.Stripe a {
   border: none;
   background: none;
   color: #fff;
   font-size: 2rem;
   cursor: pointer;
-  min-height: 2em;
+  min-height: 1.5em;
+  margin-top: 0.5em;
 }
 
 .BtnPlaceholder {
   width: 10px;
-  height: 2em;
+  height: 1.5em;
   min-height: 2em;
   font-size: 2rem;
 }

@@ -4,7 +4,10 @@ import CSS_COLOR_NAMES from "../../utils/cssColorNames";
 
 import Classes from "./ProductCard.module.css";
 
-export default function ProductCard({ id, icon, title, bgColor }) {
+export default function ProductCard({ item, bgColor }) {
+  const productCardData = { ...item };
+  const { icon, title } = productCardData;
+
   let cssColors = CSS_COLOR_NAMES.map((color) => color.toLowerCase());
   let cardBackgroundColor = cssColors.includes(bgColor.toLowerCase()) ? bgColor : "CornflowerBlue";
 
