@@ -39,8 +39,8 @@ export default function OverviewCardGroup({ id, groupingId }) {
     const groupCardType = CardGroup.cardType.cardTypes;
     const groupingId = CardGroup.grouping.id;
     const groupTitle = CardGroup.title;
-    const groupActionTitle = CardGroup.action ? CardGroup.action.actionTitle : null;
-    const groupActionTarget = CardGroup.action ? CardGroup.action.actionTarget : null;
+    const groupActionTitle = CardGroup.action ? CardGroup.action.title : null;
+    const groupActionTarget = CardGroup.action ? CardGroup.action.target : null;
 
     const groupCardsToDisplay = Object.values(cardGroupItemsData.products).map((item) =>
       GetCardComponent({
