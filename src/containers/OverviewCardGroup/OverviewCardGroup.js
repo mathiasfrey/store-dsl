@@ -13,7 +13,7 @@ import Classes from "./OverviewCardGroup.module.css";
 export default function OverviewCardGroup({ id, groupingId }) {
   let storeMainData = React.useContext(StoreMainDataConsumer);
   const [cardGroupItemsData, setCardGroupItemsData] = React.useState();
-
+  console.log(id, groupingId);
   React.useEffect(() => {
     fetchCardGroupItemsData(groupingId)
       .then((data) => setCardGroupItemsData(data))
