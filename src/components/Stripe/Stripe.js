@@ -5,7 +5,7 @@ import Classes from "./Stripe.module.css";
 
 export default function Stripe() {
   let storeMainData = React.useContext(StoreMainDataConsumer);
-  console.log("storeMainData", storeMainData);
+  // console.log("storeMainData", storeMainData);
 
   if (storeMainData === undefined) {
     return (

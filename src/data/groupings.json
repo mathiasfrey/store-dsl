@@ -31,7 +31,7 @@
           }
         ],
         "iconColor": null,
-        "flow": null,
+        "action": null,
         "productImage": null
       },
       {
@@ -50,7 +50,7 @@
         "updated_at": "2021-08-13T09:46:16.393Z",
         "tags": [],
         "iconColor": null,
-        "flow": null,
+        "action": null,
         "productImage": null
       },
       {
@@ -74,7 +74,7 @@
           }
         ],
         "iconColor": null,
-        "flow": null,
+        "action": null,
         "productImage": null
       },
       {
@@ -93,7 +93,7 @@
         "updated_at": "2021-08-10T07:35:56.239Z",
         "tags": [],
         "iconColor": null,
-        "flow": null,
+        "action": null,
         "productImage": null
       }
     ]
@@ -103,12 +103,12 @@
     "name": "Plugins",
     "published_at": "2021-08-06T21:57:50.909Z",
     "created_at": "2021-08-06T21:57:27.443Z",
-    "updated_at": "2021-08-07T08:54:27.495Z",
+    "updated_at": "2021-08-13T13:58:20.545Z",
     "products": [
       {
         "id": 6,
         "title": "George Pro",
-        "subtitle": "Manage your financial life like a pro. For small businesses and great projects.",
+        "subtitle": "Manage your financial life like a pro",
         "type": "plugin",
         "productId": "PI-PRO",
         "grouping": false,
@@ -118,13 +118,13 @@
         "locale": "en",
         "published_at": "2021-08-07T08:51:58.169Z",
         "created_at": "2021-08-07T08:51:55.059Z",
-        "updated_at": "2021-08-13T12:00:28.460Z",
+        "updated_at": "2021-08-13T14:52:46.784Z",
         "tags": [],
         "iconColor": {
           "id": 30,
-          "color": "grey"
+          "color": "teal"
         },
-        "flow": null,
+        "action": null,
         "productImage": {
           "id": 3,
           "name": "georgePro.png",
@@ -191,31 +191,9 @@
         }
       },
       {
-        "id": 8,
-        "title": "Wallpaper",
-        "subtitle": "The plugin for individual background wallpapers on your overview page. For your unique George",
-        "type": "plugin",
-        "productId": "PI-CUSTOMBG",
-        "grouping": false,
-        "icon": "MdWallpaper",
-        "alwaysShow": false,
-        "trackingId": null,
-        "locale": "en",
-        "published_at": "2021-08-07T08:53:02.340Z",
-        "created_at": "2021-08-07T08:52:52.974Z",
-        "updated_at": "2021-08-13T09:45:50.987Z",
-        "tags": [],
-        "iconColor": {
-          "id": 32,
-          "color": "teal"
-        },
-        "flow": null,
-        "productImage": null
-      },
-      {
         "id": 7,
-        "title": "Vouchers+ by OptioPay",
-        "subtitle": "Buy vouchers and boost them for free!",
+        "title": "OptioPay",
+        "subtitle": "Buy vouchers and boost them",
         "type": "plugin",
         "productId": "PI-VOUCHER",
         "grouping": false,
@@ -225,13 +203,35 @@
         "locale": "en",
         "published_at": "2021-08-07T08:52:33.293Z",
         "created_at": "2021-08-07T08:52:24.274Z",
-        "updated_at": "2021-08-13T09:45:40.574Z",
+        "updated_at": "2021-08-13T13:59:00.658Z",
         "tags": [],
         "iconColor": {
           "id": 31,
           "color": "indigo"
         },
-        "flow": null,
+        "action": null,
+        "productImage": null
+      },
+      {
+        "id": 15,
+        "title": "7 Years Archive",
+        "subtitle": "ith this plugin, your account history will go back 7 years instead of the standard 3 years.",
+        "type": "plugin",
+        "productId": "PI-SEARCHPL",
+        "grouping": false,
+        "icon": "FaRegFileArchive",
+        "alwaysShow": false,
+        "trackingId": null,
+        "locale": "en",
+        "published_at": "2021-08-09T08:00:34.633Z",
+        "created_at": "2021-08-08T14:16:57.125Z",
+        "updated_at": "2021-08-13T12:00:14.426Z",
+        "tags": [],
+        "iconColor": {
+          "id": 29,
+          "color": "indigo"
+        },
+        "action": null,
         "productImage": null
       }
     ]
@@ -241,7 +241,7 @@
     "name": "Banking products",
     "published_at": "2021-08-09T08:04:36.518Z",
     "created_at": "2021-08-09T08:01:00.974Z",
-    "updated_at": "2021-08-09T08:04:36.552Z",
+    "updated_at": "2021-08-13T14:45:06.908Z",
     "products": [
       {
         "id": 2,
@@ -259,7 +259,7 @@
         "updated_at": "2021-08-10T07:35:45.695Z",
         "tags": [],
         "iconColor": null,
-        "flow": null,
+        "action": null,
         "productImage": null
       },
       {
@@ -278,7 +278,7 @@
         "updated_at": "2021-08-10T08:38:08.230Z",
         "tags": [],
         "iconColor": null,
-        "flow": null,
+        "action": null,
         "productImage": {
           "id": 2,
           "name": "loan.png",
@@ -345,6 +345,25 @@
         }
       },
       {
+        "id": 13,
+        "title": "Device-Leasing",
+        "subtitle": "The latest Apple devices at attractive monthly rates",
+        "type": "offer",
+        "productId": "APPLELEASING",
+        "grouping": false,
+        "icon": "AiFillCar",
+        "alwaysShow": false,
+        "trackingId": null,
+        "locale": "en",
+        "published_at": "2021-08-08T14:14:04.014Z",
+        "created_at": "2021-08-08T14:13:58.345Z",
+        "updated_at": "2021-08-13T10:06:32.833Z",
+        "tags": [],
+        "iconColor": null,
+        "action": null,
+        "productImage": null
+      },
+      {
         "id": 16,
         "title": "Cards",
         "subtitle": "Your finest cards that you can get",
@@ -357,14 +376,14 @@
         "locale": "en",
         "published_at": "2021-08-09T08:04:29.101Z",
         "created_at": "2021-08-09T08:02:07.210Z",
-        "updated_at": "2021-08-13T10:06:02.043Z",
+        "updated_at": "2021-08-13T14:06:58.113Z",
         "tags": [],
         "iconColor": null,
-        "flow": {
-          "id": 17,
-          "trackingId": "CARDS_PAGE_DETAILS",
-          "actionTitle": null,
-          "actionTarget": "cards-page",
+        "action": {
+          "id": 19,
+          "trackingId": null,
+          "title": "",
+          "target": "cards-page",
           "type": "cms"
         },
         "productImage": null

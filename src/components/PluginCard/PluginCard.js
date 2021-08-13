@@ -15,8 +15,8 @@ export default function PluginCard({ id, icon, iconColor, title, subtitle, bgCol
         <div className={Classes.Icon}>{getIconComponent({ icon: icon, color: `${iconColorValidated}`, fontSize: "2.5rem", alignSelf: "left" })}</div>
         <p className={Classes.Title}>{title}</p>
         <p className={Classes.Subtitle}>
-          {subtitle.slice(0, 45)}
-          {subtitle.length > 45 ? "..." : null}
+          {subtitle.slice(0, 40)}
+          {subtitle.length > 40 ? "..." : null}
         </p>
       </div>
     </div>

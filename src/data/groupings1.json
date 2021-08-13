@@ -1,0 +1,99 @@
+{
+  "id": 1,
+  "name": "Cards",
+  "published_at": "2021-08-06T21:57:13.244Z",
+  "created_at": "2021-08-06T21:57:02.150Z",
+  "updated_at": "2021-08-08T14:17:24.158Z",
+  "products": [
+    {
+      "id": 3,
+      "title": "s MasterCard Platinum",
+      "subtitle": "The carefree-credit card  ↵with increased insurance cover and lounge access",
+      "type": "offer",
+      "productId": "C-SKMCPLAT",
+      "grouping": false,
+      "icon": "FaCcMastercard",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-06T21:54:14.517Z",
+      "created_at": "2021-08-06T21:54:09.929Z",
+      "updated_at": "2021-08-11T13:28:00.666Z",
+      "tags": [
+        {
+          "id": 1,
+          "tag": "creditcard"
+        },
+        {
+          "id": 2,
+          "tag": "overview"
+        }
+      ],
+      "iconColor": null,
+      "action": null,
+      "productImage": null
+    },
+    {
+      "id": 4,
+      "title": "s Visa Card Gold",
+      "subtitle": "Worldwide acceptance plus travel insurance for you and your relatives.",
+      "type": "offer",
+      "productId": "C-SKVIGOLD",
+      "grouping": false,
+      "icon": "FaCreditCard",
+      "alwaysShow": null,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-06T21:55:41.682Z",
+      "created_at": "2021-08-06T21:55:33.118Z",
+      "updated_at": "2021-08-13T09:46:16.393Z",
+      "tags": [],
+      "iconColor": null,
+      "action": null,
+      "productImage": null
+    },
+    {
+      "id": 5,
+      "title": "s Prepaid Classic | Online",
+      "subtitle": "Online-Shopping in style. Top-up your card with the desired amount and pay immediately on the Internet",
+      "type": "offer",
+      "productId": "S-PREPAID-CLASSIC-ONLINE",
+      "grouping": false,
+      "icon": "BsCreditCard",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-06T21:57:08.080Z",
+      "created_at": "2021-08-06T21:56:45.524Z",
+      "updated_at": "2021-08-11T13:29:29.507Z",
+      "tags": [
+        {
+          "id": 3,
+          "tag": "creditcard"
+        }
+      ],
+      "iconColor": null,
+      "action": null,
+      "productImage": null
+    },
+    {
+      "id": 14,
+      "title": "s Visa Card First",
+      "subtitle": "Pay safely cashless worldwide. The flexible credit card for a small fee.",
+      "type": "offer",
+      "productId": "C-SKVIFIRS",
+      "grouping": false,
+      "icon": "FaCcVisa",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-09T08:00:39.285Z",
+      "created_at": "2021-08-08T14:15:10.021Z",
+      "updated_at": "2021-08-10T07:35:56.239Z",
+      "tags": [],
+      "iconColor": null,
+      "action": null,
+      "productImage": null
+    }
+  ]
+}

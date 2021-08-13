@@ -1,0 +1,138 @@
+{
+  "id": 2,
+  "name": "Plugins",
+  "published_at": "2021-08-06T21:57:50.909Z",
+  "created_at": "2021-08-06T21:57:27.443Z",
+  "updated_at": "2021-08-13T13:58:20.545Z",
+  "products": [
+    {
+      "id": 6,
+      "title": "George Pro",
+      "subtitle": "Manage your financial life like a pro",
+      "type": "plugin",
+      "productId": "PI-PRO",
+      "grouping": false,
+      "icon": "SiProducthunt",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-07T08:51:58.169Z",
+      "created_at": "2021-08-07T08:51:55.059Z",
+      "updated_at": "2021-08-13T14:52:46.784Z",
+      "tags": [],
+      "iconColor": {
+        "id": 30,
+        "color": "teal"
+      },
+      "action": null,
+      "productImage": {
+        "id": 3,
+        "name": "georgePro.png",
+        "alternativeText": "",
+        "caption": "",
+        "width": 1112,
+        "height": 794,
+        "formats": {
+          "thumbnail": {
+            "name": "thumbnail_georgePro.png",
+            "hash": "thumbnail_george_Pro_670ae11d60",
+            "ext": ".png",
+            "mime": "image/png",
+            "width": 218,
+            "height": 156,
+            "size": 105.32,
+            "path": null,
+            "url": "/uploads/thumbnail_george_Pro_670ae11d60.png"
+          },
+          "large": {
+            "name": "large_georgePro.png",
+            "hash": "large_george_Pro_670ae11d60",
+            "ext": ".png",
+            "mime": "image/png",
+            "width": 1000,
+            "height": 714,
+            "size": 1762.66,
+            "path": null,
+            "url": "/uploads/large_george_Pro_670ae11d60.png"
+          },
+          "medium": {
+            "name": "medium_georgePro.png",
+            "hash": "medium_george_Pro_670ae11d60",
+            "ext": ".png",
+            "mime": "image/png",
+            "width": 750,
+            "height": 536,
+            "size": 1046,
+            "path": null,
+            "url": "/uploads/medium_george_Pro_670ae11d60.png"
+          },
+          "small": {
+            "name": "small_georgePro.png",
+            "hash": "small_george_Pro_670ae11d60",
+            "ext": ".png",
+            "mime": "image/png",
+            "width": 500,
+            "height": 357,
+            "size": 492.51,
+            "path": null,
+            "url": "/uploads/small_george_Pro_670ae11d60.png"
+          }
+        },
+        "hash": "george_Pro_670ae11d60",
+        "ext": ".png",
+        "mime": "image/png",
+        "size": 1557.28,
+        "url": "/uploads/george_Pro_670ae11d60.png",
+        "previewUrl": null,
+        "provider": "local",
+        "provider_metadata": null,
+        "created_at": "2021-08-10T08:45:17.471Z",
+        "updated_at": "2021-08-10T08:45:17.481Z"
+      }
+    },
+    {
+      "id": 7,
+      "title": "OptioPay",
+      "subtitle": "Buy vouchers and boost them",
+      "type": "plugin",
+      "productId": "PI-VOUCHER",
+      "grouping": false,
+      "icon": "BsGift",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-07T08:52:33.293Z",
+      "created_at": "2021-08-07T08:52:24.274Z",
+      "updated_at": "2021-08-13T13:59:00.658Z",
+      "tags": [],
+      "iconColor": {
+        "id": 31,
+        "color": "indigo"
+      },
+      "action": null,
+      "productImage": null
+    },
+    {
+      "id": 15,
+      "title": "7 Years Archive",
+      "subtitle": "ith this plugin, your account history will go back 7 years instead of the standard 3 years.",
+      "type": "plugin",
+      "productId": "PI-SEARCHPL",
+      "grouping": false,
+      "icon": "FaRegFileArchive",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-09T08:00:34.633Z",
+      "created_at": "2021-08-08T14:16:57.125Z",
+      "updated_at": "2021-08-13T12:00:14.426Z",
+      "tags": [],
+      "iconColor": {
+        "id": 29,
+        "color": "indigo"
+      },
+      "action": null,
+      "productImage": null
+    }
+  ]
+}
