@@ -17,7 +17,7 @@ export default function Stripe() {
     return (
       <div className={Classes.Stripe} style={{ backgroundColor: stripeData.backgroundColor.color }}>
         <div className={Classes.Container}>
-          {!stripeData.showBackBtn ? (
+          {stripeData.showBackBtn ? (
             <button type="button">
               <IoIosArrowBack />
             </button>

@@ -10,15 +10,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 125px;
-  height: 125px;
   border-radius: 10px;
   margin: 0.5em;
   padding: 1.5em;
+  cursor: pointer;
 }
 
 .OuterTitle {
-  max-width: 125px;
+  max-width: 100px;
   text-align: center;
   font-size: 0.8rem;
   color: grey;
@@ -30,7 +29,7 @@
   color: #fff;
 }
 
-@media screen and (max-width: 370px) {
+/* @media screen and (max-width: 370px) {
   .ProductCard {
     width: 80vw;
     height: 125px;
@@ -55,4 +54,4 @@
     margin: 0 auto;
     width: 30%;
   }
-}
+} */

@@ -1,0 +1,40 @@
+.PluginCardWrapper {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.PluginCardWrapper + .PluginCardWrapper {
+  margin-left: 1em;
+}
+
+.PluginCard {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border-radius: 10px;
+  padding: 1em;
+  cursor: pointer;
+  margin: 0.5em 0em;
+  box-shadow: 1px 1px 3px #cfcdcd;
+  width: 150px;
+  height: 150px;
+  overflow: hidden;
+}
+
+.Icon {
+}
+
+.Title {
+  color: var(--darkBlueText);
+  font-size: 1rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+}
+
+.Subtitle {
+  color: var(--lightGrayText);
+  font-size: 0.9rem;
+}

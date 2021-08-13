@@ -43,11 +43,11 @@
 
 .FeatureCardFooter h4 {
   padding: 0.5em 0;
-  color: rgba(34, 66, 110, 255);
+  color: var(--darkBlueText);
 }
 
 .FeatureCardFooter p {
   padding: 0.5em 0;
   font-size: 0.9rem;
-  color: rgba(104, 130, 161, 255);
+  color: var(--lightGrayText);
 }

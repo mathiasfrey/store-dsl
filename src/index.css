@@ -18,6 +18,7 @@ code {
 :root {
   --darkBlueText: rgba(29, 63, 107, 255);
   --lightBlueText: rgba(27, 101, 209, 255);
+  --lightGrayText: rgba(104, 130, 161, 255);
   --lightGrayBg: rgba(245, 247, 250, 255);
   --darkBg: rgb(34, 34, 34);
   --container: 90%;
@@ -26,6 +27,8 @@ code {
 .App {
   width: 100%;
   max-width: 375px;
+  max-height: 820px;
+  overflow-y: auto;
   margin: 0 auto;
   background-color: var(--lightGrayBg);
 }

@@ -24,6 +24,17 @@ export default function OverviewCardGroup({ id, groupingId }) {
       });
   }, []);
 
+  const getCardComponent = ({ cardType, cardComponentId, bgColor, icon, title, subtitle }) => {
+    switch (cardType) {
+      case "productCard":
+        return <ProductCard id={cardComponentId} key={cardComponentId} icon={icon} title={title} subtitle={subtitle} bgColor={bgColor} />;
+      case "pluginCard":
+        return <PluginCard id={cardComponentId} key={cardComponentId} icon={icon} title={title} subtitle={subtitle} bgColor={bgColor} />;
+      default:
+        return null;
+    }
+  };
+
   if (cardGroupItemsData === undefined) {
     return (
       <div className={Classes.OverviewCardGroup}>
@@ -42,6 +53,18 @@ export default function OverviewCardGroup({ id, groupingId }) {
     const groupTitle = CardGroup.title.label;
     const groupActionTitle = CardGroup.title.actionTitle;
     const groupActionTarget = CardGroup.title.actionTarget;
+
+    const groupCardsToDisplay = Object.values(cardGroupItemsData.products).map((item) =>
+      getCardComponent({
+        cardType: groupCardType,
+        cardComponentId: item.id,
+        bgColor: groupCardBackgroundColor,
+        icon: item.icon,
+        title: item.title,
+        subtitle: item.subtitle,
+      })
+    );
+
     return (
       <div className={Classes.Container}>
         <div className={Classes.OverviewCardGroup}>
@@ -54,12 +77,7 @@ export default function OverviewCardGroup({ id, groupingId }) {
               </Link>
             ) : null}
           </div>
-          {/* <div className={Classes.Cards}>
-          {CardGroupItemsData.products.map((item) => (
-            <ProductCard id={item.id} key={item.id} cardsBgColor={cardsBgColor} title={item.title} icon={item.icon} />
-          ))}
-        </div> */}
-          <p>collection</p>
+          <div className={Classes.Cards}>{groupCardsToDisplay}</div>
         </div>
       </div>
     );
