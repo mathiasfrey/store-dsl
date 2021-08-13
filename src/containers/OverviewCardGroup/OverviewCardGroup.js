@@ -6,8 +6,7 @@ import { Link } from "react-router-dom";
 
 import { IoIosArrowForward } from "react-icons/io";
 
-import ProductCard from "../../components/ProductCard/ProductCard";
-import PluginCard from "../../components/PluginCard/PluginCard";
+import GetCardComponent from "../../utils/getCardComponent";
 
 import Classes from "./OverviewCardGroup.module.css";
 
@@ -23,17 +22,6 @@ export default function OverviewCardGroup({ id, groupingId }) {
         setCardGroupItemsData(Object.values(CardGroupItemsDataMock).filter((item) => item.id === groupingId));
       });
   }, []);
-
-  const getCardComponent = ({ cardType, cardComponentId, bgColor, icon, title, subtitle }) => {
-    switch (cardType) {
-      case "productCard":
-        return <ProductCard id={cardComponentId} key={cardComponentId} icon={icon} title={title} subtitle={subtitle} bgColor={bgColor} />;
-      case "pluginCard":
-        return <PluginCard id={cardComponentId} key={cardComponentId} icon={icon} title={title} subtitle={subtitle} bgColor={bgColor} />;
-      default:
-        return null;
-    }
-  };
 
   if (cardGroupItemsData === undefined) {
     return (
@@ -55,7 +43,7 @@ export default function OverviewCardGroup({ id, groupingId }) {
     const groupActionTarget = CardGroup.title.actionTarget;
 
     const groupCardsToDisplay = Object.values(cardGroupItemsData.products).map((item) =>
-      getCardComponent({
+      GetCardComponent({
         cardType: groupCardType,
         cardComponentId: item.id,
         bgColor: groupCardBackgroundColor,
@@ -77,7 +65,7 @@ export default function OverviewCardGroup({ id, groupingId }) {
               </Link>
             ) : null}
           </div>
-          <div className={Classes.Cards}>{groupCardsToDisplay.slice(0, 2)}</div>
+          <div className={Classes.Cards}>{groupCardType === "pluginCard" ? groupCardsToDisplay.slice(0, 2) : groupCardsToDisplay}</div>
         </div>
       </div>
     );
