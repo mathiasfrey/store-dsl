@@ -1,45 +1,20 @@
 {
-  "id": 1,
-  "published_at": "2021-08-06T22:10:58.906Z",
-  "created_at": "2021-08-06T22:10:46.564Z",
-  "updated_at": "2021-08-11T10:40:01.864Z",
+  "id": 2,
+  "published_at": "2021-08-13T09:44:07.184Z",
+  "created_at": "2021-08-13T09:44:02.881Z",
+  "updated_at": "2021-08-13T09:44:07.205Z",
   "body": [
     {
       "__component": "ui-components.stripe",
-      "id": 6,
-      "title": "Plugins",
+      "id": 2,
       "showBackBtn": true,
       "backTarget": "store-main",
+      "title": "Plugins",
       "backgroundColor": {
-        "id": 19,
-        "color": "blue"
-      }
-    },
-    {
-      "__component": "ui-components.product-card-collection",
-      "id": 9,
-      "grouping": {
-        "id": 2,
-        "name": "Plugins",
-        "published_at": "2021-08-06T21:57:50.909Z",
-        "created_at": "2021-08-06T21:57:27.443Z",
-        "updated_at": "2021-08-07T08:54:27.495Z"
+        "id": 27,
+        "color": "indigo"
       },
-      "backgroundColor": {
-        "id": 20,
-        "color": "white"
-      },
-      "cardType": {
-        "id": 13,
-        "cardTypes": "pluginCard"
-      },
-      "title": {
-        "id": 10,
-        "label": "Plugins",
-        "actionTitle": null,
-        "actionTarget": null
-      },
-      "filtering": []
+      "action": null
     }
   ]
 }
