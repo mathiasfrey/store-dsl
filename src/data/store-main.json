@@ -2,7 +2,7 @@
   "id": 1,
   "published_at": "2021-08-13T09:38:55.245Z",
   "created_at": "2021-08-13T09:36:27.212Z",
-  "updated_at": "2021-08-13T10:30:50.537Z",
+  "updated_at": "2021-08-13T12:01:39.102Z",
   "body": [
     {
       "__component": "ui-components.stripe",
@@ -148,7 +148,7 @@
       "title": "Banking products",
       "backgroundColor": {
         "id": 26,
-        "color": "honey"
+        "color": "indigo"
       },
       "cardType": {
         "id": 17,
