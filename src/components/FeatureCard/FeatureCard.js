@@ -22,7 +22,7 @@ export default function FeatureCard({ id }) {
     const { productImage, title, subtitle } = FeatureCard.product;
     return (
       <div className={Classes.Container}>
-        <div className={Classes.FeatureCard} style={{ backgroundColor: backgroundColor, marginTop: `${isFirstOverviewItem ? "-1.5em" : "1em"}` }}>
+        <div className={Classes.FeatureCard} style={{ backgroundColor: backgroundColor, marginTop: `${isFirstOverviewItem ? "-2.5em" : "1em"}` }}>
           <div className={Classes.FeatureCardBody} style={{ backgroundImage: `url(${BASE_URL}${productImage.url})` }}></div>
           <div className={Classes.FeatureCardFooter}>
             <h4>{title}</h4>
