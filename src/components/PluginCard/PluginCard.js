@@ -8,8 +8,7 @@ export default function PluginCard({ id, icon, iconColor, title, subtitle, bgCol
   let cssColors = CSS_COLOR_NAMES.map((color) => color.toLowerCase());
   let bgColorValidated = cssColors.includes(bgColor.toLowerCase()) ? bgColor : "White";
   let iconColorValidated = cssColors.includes(iconColor.toLowerCase()) ? iconColor : "DodgerBlue";
-  //let hardCodedBackgroundColor = "white";
-  console.log("iconColor", iconColor);
+
   return (
     <div className={Classes.PluginCardWrapper}>
       <div className={Classes.PluginCard} style={{ backgroundColor: `${bgColorValidated}` }}>

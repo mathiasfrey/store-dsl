@@ -23,7 +23,7 @@ export default function OverviewCardGroup({ id, groupingId }) {
       });
   }, []);
 
-  if (cardGroupItemsData === undefined) {
+  if (cardGroupItemsData === undefined || storeMainData === undefined) {
     return (
       <div className={Classes.OverviewCardGroup}>
         <p>Loading...</p>
