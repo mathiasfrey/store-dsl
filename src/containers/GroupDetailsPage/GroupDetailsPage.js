@@ -34,10 +34,6 @@ export default function GroupDetailsPage({ targetPage }) {
     );
     console.log(itemsToDisplay);
 
-    return (
-      <div className={Classes.GroupDetailsPage}>
-        <p>This will be a page with plugins</p>
-      </div>
-    );
+    return <div className={Classes.GroupDetailsPage}>{itemsToDisplay}</div>;
   }
 }
