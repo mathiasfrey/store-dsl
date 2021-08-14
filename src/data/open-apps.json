@@ -1,0 +1,20 @@
+{
+  "id": 2,
+  "published_at": "2021-08-13T09:44:07.184Z",
+  "created_at": "2021-08-13T09:44:02.881Z",
+  "updated_at": "2021-08-13T10:58:46.206Z",
+  "body": [
+    {
+      "__component": "ui-components.stripe",
+      "id": 2,
+      "showBackBtn": true,
+      "backTarget": "store-main",
+      "title": "Open apps",
+      "backgroundColor": {
+        "id": 27,
+        "color": "crimson"
+      },
+      "action": null
+    }
+  ]
+}
