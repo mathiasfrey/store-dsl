@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+.ProductCardWrapper a {
+  text-decoration: none;
+}
+
 .ProductCard {
   display: flex;
   flex-direction: column;
