@@ -9,6 +9,7 @@ function App() {
       <Switch>
         <Route path="/" exact component={StoreMain} />
         <Route path="/plugins-page" component={GroupDetailsPage} />
+        <Route path="/open-apps" component={GroupDetailsPage} />
         <Redirect path="/store-main" to="/" />
         <Redirect to="/" />
       </Switch>

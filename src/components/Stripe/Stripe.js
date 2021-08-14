@@ -8,13 +8,25 @@ export default function Stripe({ item }) {
   return (
     <div className={Classes.Stripe} style={{ backgroundColor: stripeData.backgroundColor.color }}>
       <div className={Classes.Container}>
-        {stripeData.showBackBtn ? (
-          <Link to={`/${stripeData.backTarget}`}>
-            <IoIosArrowBack />
-          </Link>
-        ) : (
-          <div className={Classes.BtnPlaceholder}></div>
-        )}
+        <div className={Classes.StripeHeader}>
+          {stripeData.showBackBtn ? (
+            <Link to={`/${stripeData.backTarget}`}>
+              <IoIosArrowBack />
+            </Link>
+          ) : (
+            <div className={Classes.BtnPlaceholder}></div>
+          )}
+
+          {stripeData.action ? (
+            <div className={Classes.StripeNotification}>
+              <Link onClick={() => console.log(stripeData.action.target)} to={stripeData.action.target}>
+                {stripeData.action.title}
+              </Link>
+              <div className={Classes.StripeNotificationDot}></div>
+            </div>
+          ) : null}
+        </div>
+
         <h1>{stripeData.title}</h1>
       </div>
     </div>

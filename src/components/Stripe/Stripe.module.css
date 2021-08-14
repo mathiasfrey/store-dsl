@@ -19,6 +19,15 @@
   padding-bottom: 2.5em;
 }
 
+.StripeHeader {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+/* Back button */
 .Stripe h1 {
   color: #fff;
 }
@@ -31,6 +40,29 @@
   cursor: pointer;
   min-height: 1.5em;
   margin-top: 0.5em;
+}
+
+/* Notification */
+.StripeNotification {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.StripeNotificationDot {
+  width: 15px;
+  height: 15px;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.StripeNotification a {
+  font-size: 1rem;
+  text-decoration: none;
+  margin-right: 0.25em;
+  font-weight: 600;
+  font-size: 0.9rem;
 }
 
 .BtnPlaceholder {
