@@ -23,7 +23,7 @@ export default function GroupDetailsPage() {
       .then((data) => setGroupDetailsPageData(data.body))
       .catch(({ message }) => {
         console.log(message);
-        alert("API down. Mocked data used instead!");
+        alert("Live data not available for this page. Mocked data used instead!");
         setGroupDetailsPageData(mockedDataImportMappping[trimmedPathname]);
       });
   }, []);
