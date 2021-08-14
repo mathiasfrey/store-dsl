@@ -9,7 +9,7 @@
       "id": 2,
       "showBackBtn": true,
       "backTarget": "store-main",
-      "title": "Open apps",
+      "title": "Open applications",
       "backgroundColor": {
         "id": 27,
         "color": "crimson"
