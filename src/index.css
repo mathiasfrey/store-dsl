@@ -30,6 +30,5 @@ code {
   height: 812px;
   overflow-y: auto;
   margin: 0 auto;
-  margin-top: 3em;
   background-color: var(--lightGrayBg);
 }
