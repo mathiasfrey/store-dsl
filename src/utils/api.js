@@ -26,7 +26,6 @@ export async function fetchCardGroupItemsData({ groupingId }) {
 //Fetch group-details page data
 export async function fetchGroupDetailsPageData(targetPage) {
   const response = await fetch(`${BASE_URL}${targetPage}`);
-  console.log(`${BASE_URL}${targetPage}`);
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
