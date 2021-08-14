@@ -1,5 +1,2 @@
 How does Strapi deal with POST, PUT, DELETE requests?
 
-
-Group actioTarget  /pluginPage 
--this might not be enough if you need to specify different plugin pages 
