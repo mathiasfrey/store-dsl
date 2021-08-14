@@ -17,7 +17,12 @@
   margin-bottom: 1.5em;
 }
 
-.FeatureCardBody {
+.FeatureCardBodyWrapper {
+  background: url("https://dummyimage.com/320x240/fff/aaa");
+}
+
+.FeatureCardBody,
+.FeatureCardBodyWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
