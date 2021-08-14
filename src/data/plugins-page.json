@@ -2,7 +2,7 @@
   "id": 2,
   "published_at": "2021-08-13T09:44:07.184Z",
   "created_at": "2021-08-13T09:44:02.881Z",
-  "updated_at": "2021-08-13T10:58:46.206Z",
+  "updated_at": "2021-08-14T08:36:17.458Z",
   "body": [
     {
       "__component": "ui-components.stripe",
@@ -24,7 +24,7 @@
         "name": "Plugins",
         "published_at": "2021-08-06T21:57:50.909Z",
         "created_at": "2021-08-06T21:57:27.443Z",
-        "updated_at": "2021-08-13T13:58:20.545Z"
+        "updated_at": "2021-08-14T08:35:28.965Z"
       },
       "title": null,
       "backgroundColor": {

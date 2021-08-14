@@ -1,18 +1,27 @@
 import React from "react";
 import { useLocation } from "react-router-dom";
-import { fetchCardGroupItemsData } from "../../utils/api";
-import CardGroupItemsDataMock from "../../data/groupings.json";
 import { Link } from "react-router-dom";
 
+import { fetchCardGroupItemsData } from "../../utils/api";
+import groupings1MockedData from "../../data/groupings1.json";
+import groupings2MockedData from "../../data/groupings2.json";
+import groupings3MockedData from "../../data/groupings3.json";
+import groupings4MockedData from "../../data/groupings4.json";
+
 import { IoIosArrowForward } from "react-icons/io";
-
 import GetCardComponent from "../../utils/getCardComponent";
-
 import Classes from "./OverviewCardGroup.module.css";
+
+const mockedDataImportMappping = {
+  groupings1MockedData: groupings1MockedData,
+  groupings2MockedData: groupings2MockedData,
+  groupings3MockedData: groupings3MockedData,
+  groupings4MockedData: groupings4MockedData,
+};
 
 export default function OverviewCardGroup({ item }) {
   const location = useLocation();
-  //console.log(location.pathname);
+  //console.log("cardGroup", item);
   const cardGroupData = { ...item };
   const groupCardBackgroundColor = cardGroupData.backgroundColor.color;
   const groupCardType = cardGroupData.cardType.cardTypes;
@@ -22,13 +31,13 @@ export default function OverviewCardGroup({ item }) {
   const groupActionTarget = cardGroupData.action ? cardGroupData.action.target : null;
 
   const [cardGroupItemsData, setCardGroupItemsData] = React.useState();
-  React.useEffect(() => {
-    fetchCardGroupItemsData()
-      .then((data) => setCardGroupItemsData(data.filter((item) => item.id === groupingId)[0]))
-      .catch(({ message }) => {
-        console.log(message);
 
-        setCardGroupItemsData(CardGroupItemsDataMock.filter((item) => item.id === groupingId)[0]);
+  React.useEffect(() => {
+    fetchCardGroupItemsData({ groupingId })
+      .then((data) => setCardGroupItemsData(data))
+      .catch((error) => {
+        console.log(`Live data not available for the ${groupTitle} product group. Mocked data used instead!`);
+        setCardGroupItemsData(mockedDataImportMappping[`groupings${groupingId}MockedData`]);
       });
   }, []);
 
@@ -39,7 +48,6 @@ export default function OverviewCardGroup({ item }) {
       </div>
     );
   } else {
-    //console.log("cardGroupItemsData", cardGroupItemsData);
     const groupCardsToDisplay = Object.values(cardGroupItemsData.products).map((item) =>
       GetCardComponent({
         cardType: groupCardType,

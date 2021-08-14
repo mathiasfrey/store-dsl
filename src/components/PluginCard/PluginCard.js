@@ -7,7 +7,7 @@ import Classes from "./PluginCard.module.css";
 export default function PluginCard({ item, bgColor }) {
   const pluginCardData = { ...item };
   const { icon, title, subtitle } = pluginCardData;
-  const iconColor = pluginCardData.iconColor.color;
+  const iconColor = pluginCardData.iconColor ? pluginCardData.iconColor.color : "white";
 
   let cssColors = CSS_COLOR_NAMES.map((color) => color.toLowerCase());
   let bgColorValidated = cssColors.includes(bgColor.toLowerCase()) ? bgColor : "White";

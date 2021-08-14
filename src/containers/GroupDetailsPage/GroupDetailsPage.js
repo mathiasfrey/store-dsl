@@ -2,6 +2,7 @@ import React from "react";
 import { useLocation } from "react-router-dom";
 
 import PluginsPageMockedData from "../../data/plugins-page.json";
+import CardsPageMockedData from "../../data/cards-page.json";
 import OpenAppsPageMockedData from "../../data/open-apps.json";
 import { fetchGroupDetailsPageData } from "../../utils/api";
 
@@ -11,6 +12,7 @@ import Classes from "./GroupDetailsPage.module.css";
 const mockedDataImportMappping = {
   pluginspage: PluginsPageMockedData.body,
   openapps: OpenAppsPageMockedData.body,
+  cardspage: CardsPageMockedData.body,
 };
 
 export default function GroupDetailsPage() {

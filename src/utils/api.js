@@ -11,12 +11,15 @@ export async function fetchStoreMainData() {
 }
 
 //Fetch card collection details
-export async function fetchCardGroupItemsData() {
-  const response = await fetch(`${BASE_URL}/groupings}`);
+export async function fetchCardGroupItemsData({ groupingId }) {
+  //console.log(`${BASE_URL}/groupings/${groupingId}`);
+  const response = await fetch(`${BASE_URL}/groupings/${groupingId}`);
+  //console.log(response);
   if (!response.ok) {
     throw new Error(`HTTP error! status: ${response.status}`);
   }
   const groupItemsData = await response.json();
+  //console.log(groupItemsData);
   return groupItemsData;
 }
 

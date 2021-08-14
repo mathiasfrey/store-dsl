@@ -149,6 +149,44 @@
         "type": "cms"
       },
       "productImage": null
+    },
+    {
+      "id": 21,
+      "title": "Payday loan",
+      "subtitle": "Get your salary early with one click",
+      "type": "offer",
+      "productId": "PI_PAYDAY",
+      "grouping": false,
+      "icon": "GiMoneyStack",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-13T19:46:07.425Z",
+      "created_at": "2021-08-13T19:46:04.692Z",
+      "updated_at": "2021-08-13T19:46:07.540Z",
+      "tags": [],
+      "iconColor": null,
+      "action": null,
+      "productImage": null
+    },
+    {
+      "id": 22,
+      "title": "Money On Click",
+      "subtitle": "Get money, get money, get money",
+      "type": "offer",
+      "productId": "PI_MONEY",
+      "grouping": false,
+      "icon": "GiPayMoney",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-13T19:47:26.185Z",
+      "created_at": "2021-08-13T19:46:55.390Z",
+      "updated_at": "2021-08-13T19:47:26.295Z",
+      "tags": [],
+      "iconColor": null,
+      "action": null,
+      "productImage": null
     }
   ]
 }

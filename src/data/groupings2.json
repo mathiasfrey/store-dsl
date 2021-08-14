@@ -3,7 +3,7 @@
   "name": "Plugins",
   "published_at": "2021-08-06T21:57:50.909Z",
   "created_at": "2021-08-06T21:57:27.443Z",
-  "updated_at": "2021-08-13T13:58:20.545Z",
+  "updated_at": "2021-08-14T08:35:28.965Z",
   "products": [
     {
       "id": 6,
@@ -18,11 +18,11 @@
       "locale": "en",
       "published_at": "2021-08-07T08:51:58.169Z",
       "created_at": "2021-08-07T08:51:55.059Z",
-      "updated_at": "2021-08-13T14:52:46.784Z",
+      "updated_at": "2021-08-13T19:55:39.554Z",
       "tags": [],
       "iconColor": {
         "id": 30,
-        "color": "teal"
+        "color": "orange"
       },
       "action": null,
       "productImage": {
@@ -114,8 +114,8 @@
     },
     {
       "id": 15,
-      "title": "7 Years Archive",
-      "subtitle": "ith this plugin, your account history will go back 7 years instead of the standard 3 years.",
+      "title": "7y  Archive",
+      "subtitle": "With this plugin, your account history will go back 7 years",
       "type": "plugin",
       "productId": "PI-SEARCHPL",
       "grouping": false,
@@ -125,11 +125,33 @@
       "locale": "en",
       "published_at": "2021-08-09T08:00:34.633Z",
       "created_at": "2021-08-08T14:16:57.125Z",
-      "updated_at": "2021-08-13T12:00:14.426Z",
+      "updated_at": "2021-08-14T08:40:32.717Z",
       "tags": [],
       "iconColor": {
         "id": 29,
-        "color": "indigo"
+        "color": "orange"
+      },
+      "action": null,
+      "productImage": null
+    },
+    {
+      "id": 8,
+      "title": "Wallpaper",
+      "subtitle": "The plugin for individual background wallpapers on your overview page. For your unique George",
+      "type": "plugin",
+      "productId": "PI-CUSTOMBG",
+      "grouping": false,
+      "icon": "MdWallpaper",
+      "alwaysShow": false,
+      "trackingId": null,
+      "locale": "en",
+      "published_at": "2021-08-07T08:53:02.340Z",
+      "created_at": "2021-08-07T08:52:52.974Z",
+      "updated_at": "2021-08-13T09:45:50.987Z",
+      "tags": [],
+      "iconColor": {
+        "id": 32,
+        "color": "teal"
       },
       "action": null,
       "productImage": null
