@@ -14,6 +14,7 @@ import { ImHome3 } from "react-icons/im";
 import { FaTachometerAlt } from "react-icons/fa";
 import { GiMoneyStack } from "react-icons/gi";
 import { GiPayMoney } from "react-icons/gi";
+import { FaUmbrella } from "react-icons/fa";
 import { CgUnavailable } from "react-icons/cg";
 
 let icons = {
@@ -30,6 +31,7 @@ let icons = {
   FaRegFileArchive,
   GiBrokenBone,
   ImHome3,
+  FaUmbrella,
   FaTachometerAlt,
   GiMoneyStack,
   GiPayMoney,
