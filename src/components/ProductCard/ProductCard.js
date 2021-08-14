@@ -16,7 +16,7 @@ export default function ProductCard({ item, bgColor }) {
 
   return (
     <div className={Classes.ProductCardWrapper}>
-      <Link to={productCardData.action ? productCardData.action.target : null}>
+      <Link to={productCardData.action ? productCardData.action.target : "/"}>
         <div className={Classes.ProductCard} style={{ backgroundColor: `${cardBackgroundColor}` }}>
           <div className={Classes.Icon}>{getIconComponent({ icon: icon, color: "white", fontSize: "2.5rem", alignSelf: "left" })}</div>
           <p className={Classes.InnerTitle}>{title}</p>
