@@ -19,8 +19,10 @@ export default function Stripe({ item }) {
 
           {stripeData.action ? (
             <div className={Classes.StripeNotification}>
-              <Link to={stripeData.action.target}>{stripeData.action.title}</Link>
-              <div className={Classes.StripeNotificationDot}></div>
+              <Link to={stripeData.action.target}>
+                {stripeData.action.title}
+                <div className={Classes.StripeNotificationDot}></div>
+              </Link>
             </div>
           ) : null}
         </div>

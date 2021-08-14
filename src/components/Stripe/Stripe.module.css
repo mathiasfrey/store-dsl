@@ -54,13 +54,14 @@
   width: 15px;
   height: 15px;
   background-color: red;
+  margin-left: 0.25em;
   border-radius: 50%;
 }
 
 .StripeNotification a {
+  display: flex;
   font-size: 1rem;
   text-decoration: none;
-  margin-right: 0.25em;
   font-weight: 600;
   font-size: 0.9rem;
 }
