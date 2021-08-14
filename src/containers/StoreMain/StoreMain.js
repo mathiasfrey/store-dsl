@@ -2,18 +2,20 @@ import React from "react";
 import StoreMainDataMock from "../../data/store-main.json";
 import { fetchStoreMainData } from "../../utils/api";
 
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import GetPageComponent from "../../utils/getPageComponent";
 import Classes from "./StoreMain.module.css";
 
 export default function StoreMain() {
   const [storeMainData, setStoreMainData] = React.useState("");
+  const [apiError, setApiError] = React.useState(false);
 
   React.useEffect(() => {
     fetchStoreMainData()
       .then((data) => setStoreMainData(data.body))
       .catch(({ message }) => {
         console.log(message);
-        alert("Live data not available for this page. Mocked data used instead");
+        setApiError(true);
         setStoreMainData(StoreMainDataMock.body);
       });
   }, []);
@@ -26,6 +28,11 @@ export default function StoreMain() {
     );
   } else {
     const itemsToDisplay = Object.values(storeMainData).map((item) => GetPageComponent({ item, order: storeMainData.indexOf(item) }));
-    return <div className={Classes.StoreMain}>{itemsToDisplay}</div>;
+    return (
+      <div className={Classes.StoreMain}>
+        {apiError ? <ErrorMessage errorText={"Live data not available for this page. Mocked data used instead"} /> : null}
+        {itemsToDisplay}
+      </div>
+    );
   }
 }

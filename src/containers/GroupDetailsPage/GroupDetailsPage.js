@@ -6,6 +6,7 @@ import CardsPageMockedData from "../../data/cards-page.json";
 import OpenAppsPageMockedData from "../../data/open-apps.json";
 import { fetchGroupDetailsPageData } from "../../utils/api";
 
+import ErrorMessage from "../../components/ErrorMessage/ErrorMessage";
 import GetPageComponent from "../../utils/getPageComponent";
 import Classes from "./GroupDetailsPage.module.css";
 
@@ -19,13 +20,14 @@ export default function GroupDetailsPage() {
   const { pathname } = useLocation();
   const trimmedPathname = pathname.replace("-", "").replace("/", "");
   const [groupDetailsPageData, setGroupDetailsPageData] = React.useState("");
+  const [apiError, setApiError] = React.useState(false);
 
   React.useEffect(() => {
     fetchGroupDetailsPageData(pathname)
       .then((data) => setGroupDetailsPageData(data.body))
       .catch(({ message }) => {
         console.log(message);
-        alert("Live data not available for this page. Mocked data used instead!");
+        setApiError(true);
         setGroupDetailsPageData(mockedDataImportMappping[trimmedPathname]);
       });
   }, []);
@@ -38,6 +40,11 @@ export default function GroupDetailsPage() {
   } else {
     const itemsToDisplay = Object.values(groupDetailsPageData).map((item) => GetPageComponent({ item, order: groupDetailsPageData.indexOf(item) }));
 
-    return <div className={Classes.GroupDetailsPage}>{itemsToDisplay}</div>;
+    return (
+      <div className={Classes.GroupDetailsPage}>
+        {apiError ? <ErrorMessage errorText={"Live data not available for this page. Mocked data used instead"} /> : null}
+        {itemsToDisplay}
+      </div>
+    );
   }
 }
