@@ -4,11 +4,9 @@ import { getIconComponent } from "../../utils/getIconComponent";
 import CSS_COLOR_NAMES from "../../utils/cssColorNames";
 
 import Classes from "./ProductCard.module.css";
-import { product } from "prelude-ls";
 
 export default function ProductCard({ item, bgColor }) {
   const productCardData = { ...item };
-  console.log(productCardData);
   const { icon, title } = productCardData;
 
   let cssColors = CSS_COLOR_NAMES.map((color) => color.toLowerCase());
