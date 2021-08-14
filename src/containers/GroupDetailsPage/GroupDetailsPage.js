@@ -23,12 +23,10 @@ export default function GroupDetailsPage() {
   if (groupDetailsPageData === undefined) {
     return (
       <div className={Classes.GroupDetailsPage}>
-        <p>Loading...</p>
+        <p className={Classes.Loading}>Loading...</p>
       </div>
     );
   } else {
-    console.log("groupDetailsPageData");
-    console.log(groupDetailsPageData);
     const itemsToDisplay = Object.values(groupDetailsPageData).map((item) => GetPageComponent({ item, order: groupDetailsPageData.indexOf(item) }));
 
     return <div className={Classes.GroupDetailsPage}>{itemsToDisplay}</div>;

@@ -21,7 +21,7 @@ export default function StoreMain() {
   if (storeMainData === undefined) {
     return (
       <div className={Classes.StoreMain}>
-        <p>Loading...</p>
+        <p className={Classes.Loading}>Loading...</p>
       </div>
     );
   } else {

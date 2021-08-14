@@ -42,6 +42,6 @@ code {
   .App {
     box-sizing: content-box;
     margin-top: 3em;
-    border: 5px solid rgba(32, 71, 156, 0.849);
+    border: 2px solid rgba(32, 71, 156, 0.849);
   }
 }

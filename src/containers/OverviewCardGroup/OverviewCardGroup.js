@@ -12,7 +12,7 @@ import Classes from "./OverviewCardGroup.module.css";
 
 export default function OverviewCardGroup({ item }) {
   const location = useLocation();
-  console.log(location.pathname);
+  //console.log(location.pathname);
   const cardGroupData = { ...item };
   const groupCardBackgroundColor = cardGroupData.backgroundColor.color;
   const groupCardType = cardGroupData.cardType.cardTypes;
@@ -35,7 +35,7 @@ export default function OverviewCardGroup({ item }) {
   if (cardGroupItemsData === undefined) {
     return (
       <div className={Classes.OverviewCardGroup}>
-        <p>Loading...</p>
+        <p className={Classes.Loading}>Loading...</p>
       </div>
     );
   } else {
