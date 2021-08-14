@@ -31,7 +31,7 @@ let icons = {
   FaRegFileArchive,
   GiBrokenBone,
   ImHome3,
-  FaUmbrella,
+  IoUmbrella: FaUmbrella,
   FaTachometerAlt,
   GiMoneyStack,
   GiPayMoney,
