@@ -7,10 +7,10 @@ export default function ErrorMessage({ errorText }) {
   React.useEffect(() => {
     setTimeout(function () {
       setMsgClasses(mgsClasses.concat(Classes.Disappear));
-    }, 3000);
+    }, 2000);
     setTimeout(function () {
       setHide(true);
-    }, 4500);
+    }, 3500);
   }, []);
 
   return (
