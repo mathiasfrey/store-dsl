@@ -1,5 +1,5 @@
 import React from "react";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
 
 import PluginsPageMockedData from "../../data/plugins-page.json";
 import CardsPageMockedData from "../../data/cards-page.json";
@@ -17,18 +17,18 @@ const mockedDataImportMappping = {
 };
 
 export default function GroupDetailsPage() {
-  const { pathname } = useLocation();
-  const trimmedPathname = pathname.replace("-", "").replace("/", "");
+  const { pagename } = useParams();
+  const trimmedPagename = pagename.replace("-", "").replace("/", "");
   const [groupDetailsPageData, setGroupDetailsPageData] = React.useState("");
   const [apiError, setApiError] = React.useState(false);
 
   React.useEffect(() => {
-    fetchGroupDetailsPageData(pathname)
+    fetchGroupDetailsPageData(pagename)
       .then((data) => setGroupDetailsPageData(data.body))
       .catch(({ message }) => {
         console.log(message);
         setApiError(true);
-        setGroupDetailsPageData(mockedDataImportMappping[trimmedPathname]);
+        setGroupDetailsPageData(mockedDataImportMappping[trimmedPagename]);
       });
   }, []);
   if (groupDetailsPageData === undefined) {
