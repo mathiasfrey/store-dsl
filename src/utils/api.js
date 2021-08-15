@@ -2,6 +2,7 @@ export const BASE_URL = "https://europe-central2-western-storm-322812.cloudfunct
 
 //Fetch Store main data
 export async function fetchStoreMainData() {
+  console.log("Fetching data for the store main page");
   console.log(`${BASE_URL}/store-main`);
   const response = await fetch(`${BASE_URL}/store-main`);
   if (!response.ok) {
@@ -13,7 +14,7 @@ export async function fetchStoreMainData() {
 
 //Fetch card collection details
 export async function fetchCardGroupItemsData({ groupingId }) {
-  //console.log(`${BASE_URL}/groupings/${groupingId}`);
+  console.log("Fetching data for a product group");
   console.log(`${BASE_URL}/groupings/${groupingId}`);
   const response = await fetch(`${BASE_URL}/groupings/${groupingId}`);
   //console.log(response);
@@ -27,6 +28,7 @@ export async function fetchCardGroupItemsData({ groupingId }) {
 
 //Fetch group-details page data
 export async function fetchGroupDetailsPageData(targetPage) {
+  console.log("Fetching data for a detail page");
   console.log(`${BASE_URL}/${targetPage}`);
   const response = await fetch(`${BASE_URL}${targetPage}`);
   if (!response.ok) {
