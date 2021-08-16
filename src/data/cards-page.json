@@ -2,41 +2,38 @@
   "id": 3,
   "published_at": "2021-08-14T15:33:05.554Z",
   "created_at": "2021-08-14T15:32:58.228Z",
-  "updated_at": "2021-08-14T15:33:05.614Z",
+  "updated_at": "2021-08-16T11:41:50.764Z",
   "body": [
-    {
-      "__component": "ui-components.stripe",
-      "id": 5,
-      "showBackBtn": true,
-      "backTarget": "store-main",
-      "title": "Cards",
-      "backgroundColor": {
-        "id": 40,
-        "color": "indigo"
+      {
+          "__component": "ui-components.stripe",
+          "id": 5,
+          "showBackBtn": true,
+          "backTarget": "store-main",
+          "title": "Cards",
+          "backgroundColor": {
+              "id": 40,
+              "color": "indigo"
+          },
+          "action": null
       },
-      "action": null
-    },
-    {
-      "__component": "ui-components.product-card-collection",
-      "id": 17,
-      "grouping": {
-        "id": 1,
-        "name": "Cards",
-        "published_at": "2021-08-06T21:57:13.244Z",
-        "created_at": "2021-08-06T21:57:02.150Z",
-        "updated_at": "2021-08-08T14:17:24.158Z"
-      },
-      "title": null,
-      "backgroundColor": {
-        "id": 41,
-        "color": "gold"
-      },
-      "cardType": {
-        "id": 23,
-        "cardTypes": "productCard"
-      },
-      "action": null,
-      "filtering": []
-    }
+      {
+          "__component": "ui-components.product-card-collection",
+          "id": 17,
+          "grouping": {
+              "id": 1,
+              "name": "Cards",
+              "published_at": "2021-08-06T21:57:13.244Z",
+              "created_at": "2021-08-06T21:57:02.150Z",
+              "updated_at": "2021-08-08T14:17:24.158Z"
+          },
+          "title": null,
+          "backgroundColor": null,
+          "cardType": {
+              "id": 23,
+              "cardTypes": "functionCard"
+          },
+          "action": null,
+          "filtering": []
+      }
   ]
 }

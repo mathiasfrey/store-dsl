@@ -15,6 +15,8 @@ const GetPageComponent = ({ item, order }) => {
         return <ProductCard item={item} key={item.id} />;
       } else if (item.cardType.cardTypes === "pluginCard") {
         return <PluginCard item={item} key={item.id} />;
+      } else if (item.cardType.cardTypes === "functionCard") {
+        return <PluginCard item={item} key={item.id} />;
       } else {
         return null;
       }

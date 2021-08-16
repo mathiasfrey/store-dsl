@@ -23,7 +23,7 @@ export default function OverviewCardGroup({ item }) {
   const location = useLocation();
   //console.log("cardGroup", item);
   const cardGroupData = { ...item };
-  const groupCardBackgroundColor = cardGroupData.backgroundColor.color;
+  const groupCardBackgroundColor = cardGroupData.backgroundColor ? cardGroupData.backgroundColor.color : null;
   const groupCardType = cardGroupData.cardType.cardTypes;
   const groupingId = cardGroupData.grouping.id;
   const groupTitle = cardGroupData.title;
