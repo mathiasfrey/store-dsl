@@ -1,4 +1,4 @@
-export const BASE_URL = "https://europe-central2-western-storm-322812.cloudfunctions.ne/store-dsl-strapi"; //"http://46.101.236.251:1337";
+export const BASE_URL = "https://europe-central2-western-storm-322812.cloudfunctions.net/store-dsl-strapi"; //"http://46.101.236.251:1337";
 
 //Fetch Store main data
 export async function fetchStoreMainData() {
