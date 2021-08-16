@@ -18,7 +18,7 @@
 }
 
 .FeatureCardBodyWrapper {
-  background: url("https://dummyimage.com/320x240/fff/aaa");
+  background-image: url("https://github.com/mathiasfrey/store-dsl/blob/master/src/media/imageplaceholder.png");
 }
 
 .FeatureCardBody,
