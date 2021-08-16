@@ -68,7 +68,9 @@ export default function OverviewCardGroup({ item }) {
               </Link>
             ) : null}
           </div>
-          <div className={Classes.Cards}>{groupCardType === "pluginCard" && location.pathname === "/" ? groupCardsToDisplay.slice(0, 2) : groupCardsToDisplay}</div>
+          <div className={Classes.Cards} style={{ marginTop: `${groupCardType === "pluginCard" && location.pathname !== "/" ? "-3.5em" : "0em"}` }}>
+            {groupCardType === "pluginCard" && location.pathname === "/" ? groupCardsToDisplay.slice(0, 2) : groupCardsToDisplay}
+          </div>
         </div>
       </div>
     );

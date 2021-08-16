@@ -5,7 +5,6 @@ import { BASE_URL } from "../../utils/api";
 export default function FunctionCard({ item }) {
   const functionCardData = { ...item };
   const { productImage, title, subtitle } = functionCardData;
-  console.log(`${BASE_URL}${productImage.formats.thumbnail.url}`);
   return (
     <div className={Classes.FunctionCardWrapper}>
       <div className={Classes.FunctionCard}>
