@@ -1,2 +1,0 @@
-How does Strapi deal with POST, PUT, DELETE requests?
-
