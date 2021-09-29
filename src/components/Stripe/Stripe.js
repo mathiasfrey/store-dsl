@@ -6,7 +6,10 @@ import Classes from "./Stripe.module.css";
 export default function Stripe({ item }) {
   const stripeData = { ...item };
   return (
-    <div className={Classes.Stripe} style={{ backgroundColor: stripeData.backgroundColor.color }}>
+    <div
+      className={Classes.Stripe}
+      style={{ backgroundColor: stripeData.backgroundColor.color }}
+    >
       <div className={Classes.Container}>
         <div className={Classes.StripeHeader}>
           {stripeData.showBackBtn ? (

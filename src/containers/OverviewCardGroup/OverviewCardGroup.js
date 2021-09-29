@@ -23,21 +23,40 @@ export default function OverviewCardGroup({ item }) {
   const location = useLocation();
   //console.log("cardGroup", item);
   const cardGroupData = { ...item };
-  const groupCardBackgroundColor = cardGroupData.backgroundColor ? cardGroupData.backgroundColor.color : null;
+  const groupCardBackgroundColor = cardGroupData.backgroundColor
+    ? cardGroupData.backgroundColor.color
+    : null;
   const groupCardType = cardGroupData.cardType.cardTypes;
   const groupingId = cardGroupData.grouping.id;
   const groupTitle = cardGroupData.title;
-  const groupActionTitle = cardGroupData.action ? cardGroupData.action.title : null;
-  const groupActionTarget = cardGroupData.action ? cardGroupData.action.target : null;
+  const groupActionTitle = cardGroupData.action
+    ? cardGroupData.action.title
+    : null;
+  const groupActionTarget = cardGroupData.action
+    ? cardGroupData.action.target
+    : null;
 
   const [cardGroupItemsData, setCardGroupItemsData] = React.useState();
 
   React.useEffect(() => {
     fetchCardGroupItemsData({ groupingId })
-      .then((data) => setCardGroupItemsData(data))
+      .then((data) => {
+        if (data === "TIME_OUT") {
+          console.log(data);
+          setCardGroupItemsData(
+            mockedDataImportMappping[`groupings${groupingId}MockedData`]
+          );
+        } else {
+          setCardGroupItemsData(data);
+        }
+      })
       .catch((error) => {
-        console.log(`Live data not available for the ${groupTitle} product group. Mocked data used instead!`);
-        setCardGroupItemsData(mockedDataImportMappping[`groupings${groupingId}MockedData`]);
+        console.log(
+          `Live data not available for the ${groupTitle} product group. Mocked data used instead!`
+        );
+        setCardGroupItemsData(
+          mockedDataImportMappping[`groupings${groupingId}MockedData`]
+        );
       });
   }, []);
 
@@ -48,12 +67,13 @@ export default function OverviewCardGroup({ item }) {
       </div>
     );
   } else {
-    const groupCardsToDisplay = Object.values(cardGroupItemsData.products).map((item) =>
-      GetCardComponent({
-        cardType: groupCardType,
-        bgColor: groupCardBackgroundColor,
-        item,
-      })
+    const groupCardsToDisplay = Object.values(cardGroupItemsData.products).map(
+      (item) =>
+        GetCardComponent({
+          cardType: groupCardType,
+          bgColor: groupCardBackgroundColor,
+          item,
+        })
     );
 
     return (
@@ -68,8 +88,19 @@ export default function OverviewCardGroup({ item }) {
               </Link>
             ) : null}
           </div>
-          <div className={Classes.Cards} style={{ marginTop: `${groupCardType === "pluginCard" && location.pathname !== "/" ? "-3.5em" : "0em"}` }}>
-            {groupCardType === "pluginCard" && location.pathname === "/" ? groupCardsToDisplay.slice(0, 2) : groupCardsToDisplay}
+          <div
+            className={Classes.Cards}
+            style={{
+              marginTop: `${
+                groupCardType === "pluginCard" && location.pathname !== "/"
+                  ? "-3.5em"
+                  : "0em"
+              }`,
+            }}
+          >
+            {groupCardType === "pluginCard" && location.pathname === "/"
+              ? groupCardsToDisplay.slice(0, 2)
+              : groupCardsToDisplay}
           </div>
         </div>
       </div>

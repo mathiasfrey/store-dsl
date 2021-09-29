@@ -12,7 +12,14 @@ export default function StoreMain() {
 
   React.useEffect(() => {
     fetchStoreMainData()
-      .then((data) => setStoreMainData(data.body))
+      .then((data) => {
+        if (data === "TIME_OUT") {
+          console.log(data);
+          setStoreMainData(StoreMainDataMock.body);
+        } else {
+          setStoreMainData(data.body);
+        }
+      })
       .catch(({ message }) => {
         console.log(message);
         setApiError(true);
@@ -27,10 +34,18 @@ export default function StoreMain() {
       </div>
     );
   } else {
-    const itemsToDisplay = Object.values(storeMainData).map((item) => GetPageComponent({ item, order: storeMainData.indexOf(item) }));
+    const itemsToDisplay = Object.values(storeMainData).map((item) =>
+      GetPageComponent({ item, order: storeMainData.indexOf(item) })
+    );
     return (
       <div className={Classes.StoreMain}>
-        {apiError ? <ErrorMessage errorText={"Live data not available for this page. Mocked data used instead"} /> : null}
+        {apiError ? (
+          <ErrorMessage
+            errorText={
+              "Live data not available for this page. Mocked data used instead"
+            }
+          />
+        ) : null}
         {itemsToDisplay}
       </div>
     );

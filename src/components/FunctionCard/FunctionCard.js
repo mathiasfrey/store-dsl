@@ -9,7 +9,12 @@ export default function FunctionCard({ item }) {
     <div className={Classes.FunctionCardWrapper}>
       <div className={Classes.FunctionCard}>
         <div className={Classes.FunctionCardImageWrapper}>
-          <div className={Classes.Image} style={{ backgroundImage: `url(${BASE_URL}${productImage.formats.thumbnail.url})` }}></div>
+          <div
+            className={Classes.Image}
+            style={{
+              backgroundImage: `url(${BASE_URL}${productImage.formats.thumbnail.url})`,
+            }}
+          ></div>
         </div>
         <div className={Classes.Body}>
           <p className={Classes.Title}>{title}</p>

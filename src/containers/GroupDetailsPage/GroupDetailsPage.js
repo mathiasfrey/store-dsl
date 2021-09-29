@@ -24,7 +24,14 @@ export default function GroupDetailsPage() {
 
   React.useEffect(() => {
     fetchGroupDetailsPageData(pagename)
-      .then((data) => setGroupDetailsPageData(data.body))
+      .then((data) => {
+        if (data === "TIME_OUT") {
+          console.log(data);
+          setGroupDetailsPageData(mockedDataImportMappping[trimmedPagename]);
+        } else {
+          setGroupDetailsPageData(data.body);
+        }
+      })
       .catch(({ message }) => {
         console.log(message);
         setApiError(true);
@@ -38,11 +45,19 @@ export default function GroupDetailsPage() {
       </div>
     );
   } else {
-    const itemsToDisplay = Object.values(groupDetailsPageData).map((item) => GetPageComponent({ item, order: groupDetailsPageData.indexOf(item) }));
+    const itemsToDisplay = Object.values(groupDetailsPageData).map((item) =>
+      GetPageComponent({ item, order: groupDetailsPageData.indexOf(item) })
+    );
 
     return (
       <div className={Classes.GroupDetailsPage}>
-        {apiError ? <ErrorMessage errorText={"Live data not available for this page. Mocked data used instead"} /> : null}
+        {apiError ? (
+          <ErrorMessage
+            errorText={
+              "Live data not available for this page. Mocked data used instead"
+            }
+          />
+        ) : null}
         {itemsToDisplay}
       </div>
     );

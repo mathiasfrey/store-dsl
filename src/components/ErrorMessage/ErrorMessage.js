@@ -14,7 +14,10 @@ export default function ErrorMessage({ errorText }) {
   }, []);
 
   return (
-    <div className={mgsClasses.join(" ")} style={{ display: `${hide ? "none" : "flex"}` }}>
+    <div
+      className={mgsClasses.join(" ")}
+      style={{ display: `${hide ? "none" : "flex"}` }}
+    >
       <p>{errorText}</p>
     </div>
   );

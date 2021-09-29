@@ -9,9 +9,18 @@ export default function FeatureCard({ item, order }) {
   const { productImage, title, subtitle } = featureCardData.product;
   return (
     <div className={Classes.Container}>
-      <div className={Classes.FeatureCard} style={{ backgroundColor: backgroundColor, marginTop: `${order === 1 ? "-2.5em" : "1em"}` }}>
+      <div
+        className={Classes.FeatureCard}
+        style={{
+          backgroundColor: backgroundColor,
+          marginTop: `${order === 1 ? "-2.5em" : "1em"}`,
+        }}
+      >
         <div className={Classes.FeatureCardBodyWrapper}>
-          <div className={Classes.FeatureCardBody} style={{ backgroundImage: `url(${BASE_URL}${productImage.url})` }}></div>
+          <div
+            className={Classes.FeatureCardBody}
+            style={{ backgroundImage: `url(${BASE_URL}${productImage.url})` }}
+          ></div>
         </div>
         <div className={Classes.FeatureCardFooter}>
           <h4>{title}</h4>
